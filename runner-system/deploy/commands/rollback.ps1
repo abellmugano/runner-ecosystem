@@ -7,5 +7,5 @@ param(
     [string]$Version = ""
 )
 
-Write-Host "Rollback: Environment=$Environment, Project=$ProjectName, Version=$Version" -ForegroundColor Cyan
+Write-Host "Rollback PS1: Environment=$Environment, Project=$ProjectName, Version=$Version" -ForegroundColor Cyan
 exit 0
