@@ -1,10 +1,18 @@
 {
   "projects": {
-    "meu-projeto": {
-      "path": "../../meu-projeto",
+    "sample-app": {
+      "path": "sample-app",
       "dependencies": [],
-      "pre_build": ["scripts/prebuild.ps1"],
-      "post_build": ["scripts/postbuild.ps1"],
+      "pre_build": [],
+      "post_build": [],
+      "test_command": "",
+      "doc_command": ""
+    },
+    "demo-module": {
+      "path": "demo-module",
+      "dependencies": [],
+      "pre_build": [],
+      "post_build": [],
       "test_command": "",
       "doc_command": ""
     }

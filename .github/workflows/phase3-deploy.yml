@@ -1,0 +1,19 @@
+name: Phase 3 - Deploy
+
+on:
+  push:
+    branches: [ phase3-deploy ]
+  pull_request:
+    branches: [ phase3-deploy ]
+
+jobs:
+  deploy-phase3:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Deploy Skeleton
+        shell: pwsh
+        run: |
+          pwsh -NoProfile -Command "& { .\runner-system\deploy\commands\deploy.ps1 -Environment 'test' -ProjectName 'sample-app' }"

@@ -1,0 +1,19 @@
+name: Phase 4 - Observability
+
+on:
+  push:
+    branches: [ phase4-observability ]
+  pull_request:
+    branches: [ phase4-observability ]
+
+jobs:
+  observability-phase4:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Observability Dashboard
+        shell: pwsh
+        run: |
+          pwsh -NoProfile -Command "& { .\runner-system\observability\commands\dashboard.ps1 }"

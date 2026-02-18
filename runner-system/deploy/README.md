@@ -1,11 +1,8 @@
-# Deploy System - Phase 3 (Skeleton)
+# Deploy System - Phase 3
 
-Este repositório contém a Fase 3 de Deploy. Implementação inicial com estruturas de ambientes, scripts de deploy/rollback/status e integração com os agentes via CLI.
+Este diretório implementa a Fase 3 de Deploy com deploy, rollback e status, integrando com os agentes via CLI.
 
-Arquivos principais:
-- deploy.ps1
-- rollback.ps1
-- status.ps1
-- config/deploy.json
-
-Como usar com Orbit: exemplos simples, conforme especificação.
+- Arquivos: deploy.ps1, rollback.ps1, status.ps1, config/deploy.json
+- Orbit: orbit deploy <env> [-ProjectName <nome>]
+- Ambientes: test, staging, production
+- Fluxo básico: valida ambiente, copia artefato, sanidade, logs, governance

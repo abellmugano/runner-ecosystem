@@ -1,0 +1,25 @@
+name: Phase 2 - Build Expandido
+
+on:
+  push:
+    branches: [ phase2-build-expand ]
+  pull_request:
+    branches: [ phase2-build-expand ]
+
+jobs:
+  build-phase2:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run Build Phase 2
+        shell: pwsh
+        run: |
+          pwsh -NoProfile -Command "& { .\runner-system\build\commands\build.ps1 -ProjectName 'sample-app' -Target 'release' }"
+          pwsh -NoProfile -Command "& { .\runner-system\build\commands\build.ps1 -ProjectName 'demo-module' -Target 'debug' }"
