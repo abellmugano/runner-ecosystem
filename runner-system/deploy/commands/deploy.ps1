@@ -39,6 +39,40 @@ try {
 
     # Registro simples
     Write-Host "Registro de deploy: $Environment -> $ProjectName" -ForegroundColor Green
+    # Atualiza deploy.json (histórico simples)
+    try {
+        $deployJson = Get-Content -Path $configPath -Raw | ConvertFrom-Json
+        $entry = @{
+            timestamp = (Get-Date -Format "yyyy-MM-dd HH:mm:ss")
+            environment = $Environment
+            project = $ProjectName
+            version = $Version
+            source = $source
+            target = $dest
+            status = "success"
+        }
+        $deployJson.deploy_history += $entry
+        $deployJson | ConvertTo-Json -Depth 10 | Set-Content -Path $configPath -Encoding UTF8
+        Write-Host "Deploy history updated" -ForegroundColor Green
+    } catch {
+        Write-Host "[WARN] Could not update deploy history: $_" -ForegroundColor Yellow
+    }
+    
+    # Registro com governance (se houver
+    if ($ProjectName) {
+        try {
+            $govPath = Join-Path (Split-Path -Parent $RootPath) "agent-governance/cli.py".Replace('/', '\')
+            & python $govPath "register" --name $ProjectName --version $Version --status "deployed:$Environment" 2>$null
+        } catch {
+            # ignore governance failures in skeleton
+        }
+    }
+    
+    # Log via observability
+    try {
+        $logMsg = "Deploy completed: $ProjectName to $Environment"
+        & python (Join-Path $RootPath "agent-observability/cli.py".Replace('/', '\')) "log" --level "info" --message "$logMsg" --module "deploy" 2>$null
+    } catch { }
     exit 0
 } catch {
     Write-Host "[ERRO] Deploy falhou: $_" -ForegroundColor Red
