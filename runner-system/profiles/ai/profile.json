@@ -1,0 +1,177 @@
+{
+  "profile": "ai",
+  "description": "AI/ML development environment profile",
+  "version": "1.0.0",
+  "created_at": "2026-02-10",
+  "author": "Runner AI Team",
+  "settings": {
+    "logging": {
+      "level": "INFO",
+      "file": "ai.log",
+      "max_size": "50MB",
+      "retention_days": 30,
+      "console_output": true,
+      "structured_logging": true,
+      "ai_metrics": true
+    },
+    "health_check": {
+      "interval": 15,
+      "timeout": 10,
+      "max_retries": 5,
+      "enabled": true,
+      "auto_recover": true,
+      "ai_model_check": true
+    },
+    "metrics": {
+      "enabled": true,
+      "interval": 10,
+      "retention_days": 90,
+      "console_output": true,
+      "file_output": true,
+      "custom_metrics": ["cpu", "memory", "disk", "network", "gpu", "ai_model_performance"],
+      "ai_metrics": {
+        "model_accuracy": true,
+        "inference_time": true,
+        "training_progress": true,
+        "data_throughput": true
+      }
+    },
+    "build": {
+      "mode": "development",
+      "optimization": "none",
+      "source_maps": true,
+      "watch_mode": true,
+      "incremental_build": true,
+      "ai_build_support": true,
+      "tensorrt_support": true,
+      "onnx_support": true
+    },
+    "deploy": {
+      "environment": "staging",
+      "auto_deploy": false,
+      "rollback_enabled": true,
+      "health_check_before_deploy": true,
+      "backup_before_deploy": true,
+      "gpu_support": true,
+      "model_serving": true
+    },
+    "security": {
+      "audit_enabled": true,
+      "password_policy": {
+        "minimum_length": 12,
+        "require_uppercase": true,
+        "require_lowercase": true,
+        "require_numbers": true,
+        "require_special_characters": true,
+        "password_expiration_days": 60
+      },
+      "mfa_required": true,
+      "encryption_at_rest": true,
+      "encryption_in_transit": true,
+      "ai_model_security": true,
+      "data_anonymization": true
+    },
+    "observability": {
+      "tracing_enabled": true,
+      "sampling_rate": 100,
+      "span_export": "jaeger",
+      "metrics_export": "prometheus",
+      "logs_export": "elasticsearch",
+      "ai_tracing": true,
+      "model_metrics": true
+    },
+    "cluster": {
+      "node_count": 4,
+      "node_type": "multi-gpu",
+      "replication_factor": 3,
+      "quorum_size": 2,
+      "heartbeat_interval": 15,
+      "gpu_support": true,
+      "distributed_training": true
+    },
+    "sdk": {
+      "template": "ai-service",
+      "examples": ["nlp-service", "computer-vision", "recommendation-engine", "generative-model"],
+      "verbose_output": true,
+      "auto_format": true,
+      "ai_framework_support": ["tensorflow", "pytorch", "sklearn", "transformers"]
+    },
+    "profiles": {
+      "active_profile": "ai",
+      "profile_switch_timeout": 10,
+      "profile_validation": true,
+      "profile_backup": true,
+      "ai_profile_validation": true
+    }
+  },
+  "dependencies": {
+    "required": ["supervisor", "build", "observability", "security"],
+    "optional": ["cluster", "sdk", "gpu"],
+    "version_constraints": {
+      "supervisor": "~1.0.0",
+      "build": "~1.0.0",
+      "observability": "~1.0.0",
+      "security": "~1.0.0"
+    }
+  },
+  "environment_variables": {
+    "NODE_ENV": "development",
+    "LOG_LEVEL": "INFO",
+    "DEBUG": "runner:*",
+    "CI": "false",
+    "DEVELOPMENT": "true",
+    "AI_ENV": "development",
+    "GPU_ENABLED": "true",
+    "MODEL_SERVING": "true"
+  },
+  "paths": {
+    "logs": "./logs",
+    "artifacts": "./artifacts",
+    "config": "./config",
+    "temp": "./temp",
+    "cache": "./cache",
+    "models": "./models",
+    "datasets": "./datasets",
+    "checkpoints": "./checkpoints"
+  },
+  "services": {
+    "enabled": ["supervisor", "build", "observability", "security"],
+    "auto_start": true,
+    "health_check_on_start": true,
+    "graceful_shutdown": true,
+    "gpu_services": true,
+    "model_serving_services": true
+  },
+  "features": {
+    "hot_reload": true,
+    "auto_reload": true,
+    "debug_mode": true,
+    "verbose_logging": true,
+    "development_tools": true,
+    "ai_tools": true,
+    "gpu_support": true,
+    "distributed_training": true
+  },
+  "ai_specific": {
+    "model_optimization": {
+      "quantization": true,
+      "pruning": true,
+      "knowledge_distillation": true
+    },
+    "training": {
+      "distributed_training": true,
+      "mixed_precision": true,
+      "gradient_checkpointing": true
+    },
+    "inference": {
+      "batching": true,
+      "caching": true,
+      "model_compression": true
+    },
+    "data": {
+      "augmentation": true,
+      "preprocessing": true,
+      "validation": true
+    }
+  }
+}

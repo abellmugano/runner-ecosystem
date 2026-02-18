@@ -1,0 +1,23 @@
+﻿{
+    "sistema": "Runner Ecosystem",
+    "componente": "runner-platform",
+    "versao": "1.0.0",
+    "data_certificacao": "2026-02-10 15:46:43",
+    "hash_oficial": "23DD3EDD1D57A6331FE7F784478C53F9C8A98C7E34BA48D74724A48CC2735071",
+    "arquivo_referencia": "canonico/runner.ps1",
+    "status": "VALIDADO",
+    "valido": true,
+    "principios": [
+        {
+            "nome": "Imutabilidade",
+            "descricao": "O núcleo nunca é modificado após certificação",
+            "nivel": "CRÍTICO"
+        },
+        {
+            "nome": "Verificação Ontológica",
+            "descricao": "Toda execução valida integridade via hash",
+            "nivel": "ESSENCIAL"
+        }
+    ],
+    "assinatura_digital": "RUNNER-ONTOLOGICO-v1.0"
+}

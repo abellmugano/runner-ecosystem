@@ -1,0 +1,6 @@
+{
+  "name": "Runner Supervisor",
+  "version": "1.0.0",
+  "health_interval": 30,
+  "services": []
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "pro-builder",
+    "name": "Pro Builder",
+    "description": "Advanced build system for professional developers",
+    "price": "29",
+    "currency": "USD",
+    "billing_cycle": "Monthly",
+    "license_required": "pro",
+    "features": [
+      "Unlimited concurrent builds",
+      "Advanced caching",
+      "Docker integration",
+      "Custom build environments",
+      "Priority build queue",
+      "Build analytics"
+    ],
+    "compatibility": [
+      "all",
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "version": "2.0.0",
+    "author": "Runner Ecosystem Team",
+    "rating": 4.8,
+    "downloads": 1247,
+    "last_updated": "2024-01-15",
+    "documentation": "https://docs.runner-ecosystem.com/pro-builder",
+    "support": "support@runner-ecosystem.com",
+    "tags": [
+      "build",
+      "ci/cd",
+      "automation",
+      "professional"
+    ]
+  },
+  {
+    "id": "enterprise-monitor",
+    "name": "Enterprise Monitor",
+    "description": "Comprehensive monitoring for enterprise environments",
+    "price": "99",
+    "currency": "USD",
+    "billing_cycle": "Monthly",
+    "license_required": "enterprise",
+    "features": [
+      "Real-time metrics",
+      "Custom dashboards",
+      "Alert management",
+      "SLA tracking",
+      "Multi-environment support",
+      "Advanced reporting"
+    ],
+    "compatibility": [
+      "all",
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "version": "1.5.0",
+    "author": "Runner Ecosystem Team",
+    "rating": 4.9,
+    "downloads": 892,
+    "last_updated": "2024-01-20",
+    "documentation": "https://docs.runner-ecosystem.com/enterprise-monitor",
+    "support": "support@runner-ecosystem.com",
+    "tags": [
+      "monitoring",
+      "observability",
+      "enterprise",
+      "metrics"
+    ]
+  },
+  {
+    "id": "security-pro",
+    "name": "Security Pro",
+    "description": "Advanced security scanning and compliance",
+    "price": "49",
+    "currency": "USD",
+    "billing_cycle": "Monthly",
+    "license_required": "pro",
+    "features": [
+      "Vulnerability scanning",
+      "Dependency analysis",
+      "Compliance checks",
+      "Security reporting",
+      "Automated patching",
+      "Security policies"
+    ],
+    "compatibility": [
+      "all",
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "version": "3.1.0",
+    "author": "Runner Ecosystem Team",
+    "rating": 4.7,
+    "downloads": 1536,
+    "last_updated": "2024-01-18",
+    "documentation": "https://docs.runner-ecosystem.com/security-pro",
+    "support": "support@runner-ecosystem.com",
+    "tags": [
+      "security",
+      "compliance",
+      "scanning",
+      "vulnerability"
+    ]
+  }
+]

@@ -1,0 +1,195 @@
+{
+  "profile": "enterprise",
+  "description": "Enterprise production environment profile",
+  "version": "1.0.0",
+  "created_at": "2026-02-10",
+  "author": "Runner Enterprise Team",
+  "settings": {
+    "logging": {
+      "level": "WARN",
+      "file": "enterprise.log",
+      "max_size": "100MB",
+      "retention_days": 365,
+      "console_output": false,
+      "structured_logging": true,
+      "centralized_logging": true,
+      "compliance_logging": true
+    },
+    "health_check": {
+      "interval": 30,
+      "timeout": 30,
+      "max_retries": 5,
+      "enabled": true,
+      "auto_recover": true,
+      "enterprise_health_check": true,
+      "sla_monitoring": true
+    },
+    "metrics": {
+      "enabled": true,
+      "interval": 60,
+      "retention_days": 730,
+      "console_output": false,
+      "file_output": true,
+      "custom_metrics": ["cpu", "memory", "disk", "network", "business_metrics", "compliance_metrics"],
+      "enterprise_metrics": {
+        "sla_metrics": true,
+        "business_metrics": true,
+        "compliance_metrics": true,
+        "security_metrics": true
+      }
+    },
+    "build": {
+      "mode": "production",
+      "optimization": "aggressive",
+      "source_maps": false,
+      "watch_mode": false,
+      "incremental_build": false,
+      "enterprise_build_support": true,
+      "multi_stage_build": true,
+      "security_scanning": true
+    },
+    "deploy": {
+      "environment": "production",
+      "auto_deploy": true,
+      "rollback_enabled": true,
+      "health_check_before_deploy": true,
+      "backup_before_deploy": true,
+      "blue_green_deployment": true,
+      "canary_deployment": true,
+      "zero_downtime_deploy": true
+    },
+    "security": {
+      "audit_enabled": true,
+      "password_policy": {
+        "minimum_length": 16,
+        "require_uppercase": true,
+        "require_lowercase": true,
+        "require_numbers": true,
+        "require_special_characters": true,
+        "password_expiration_days": 30
+      },
+      "mfa_required": true,
+      "encryption_at_rest": true,
+      "encryption_in_transit": true,
+      "enterprise_security": true,
+      "compliance_security": true,
+      "zero_trust_security": true
+    },
+    "observability": {
+      "tracing_enabled": true,
+      "sampling_rate": 100,
+      "span_export": "jaeger",
+      "metrics_export": "prometheus",
+      "logs_export": "elasticsearch",
+      "enterprise_observability": true,
+      "business_observability": true,
+      "compliance_observability": true
+    },
+    "cluster": {
+      "node_count": 16,
+      "node_type": "high-availability",
+      "replication_factor": 5,
+      "quorum_size": 3,
+      "heartbeat_interval": 10,
+      "enterprise_cluster": true,
+      "multi_region": true,
+      "disaster_recovery": true
+    },
+    "sdk": {
+      "template": "enterprise-service",
+      "examples": ["microservice", "api-gateway", "event-driven", "saga-pattern"],
+      "verbose_output": false,
+      "auto_format": false,
+      "enterprise_sdk_support": true,
+      "compliance_sdk": true
+    },
+    "profiles": {
+      "active_profile": "enterprise",
+      "profile_switch_timeout": 30,
+      "profile_validation": true,
+      "profile_backup": true,
+      "enterprise_profile_validation": true,
+      "compliance_profile_validation": true
+    }
+  },
+  "dependencies": {
+    "required": ["supervisor", "build", "observability", "security", "cluster"],
+    "optional": ["sdk", "compliance", "monitoring"],
+    "version_constraints": {
+      "supervisor": "~1.0.0",
+      "build": "~1.0.0",
+      "observability": "~1.0.0",
+      "security": "~1.0.0",
+      "cluster": "~1.0.0"
+    }
+  },
+  "environment_variables": {
+    "NODE_ENV": "production",
+    "LOG_LEVEL": "WARN",
+    "DEBUG": "",
+    "CI": "true",
+    "DEVELOPMENT": "false",
+    "ENTERPRISE_ENV": "production",
+    "COMPLIANCE_MODE": "true",
+    "SLA_MODE": "true",
+    "AUDIT_MODE": "true"
+  },
+  "paths": {
+    "logs": "./logs",
+    "artifacts": "./artifacts",
+    "config": "./config",
+    "temp": "./temp",
+    "cache": "./cache",
+    "audit_logs": "./audit_logs",
+    "compliance_reports": "./compliance_reports",
+    "backup": "./backup"
+  },
+  "services": {
+    "enabled": ["supervisor", "build", "observability", "security", "cluster"],
+    "auto_start": true,
+    "health_check_on_start": true,
+    "graceful_shutdown": true,
+    "enterprise_services": true,
+    "compliance_services": true,
+    "monitoring_services": true
+  },
+  "features": {
+    "hot_reload": false,
+    "auto_reload": false,
+    "debug_mode": false,
+    "verbose_logging": false,
+    "development_tools": false,
+    "enterprise_features": true,
+    "compliance_features": true,
+    "monitoring_features": true
+  },
+  "enterprise_specific": {
+    "compliance": {
+      "standards": ["SOC2", "ISO27001", "GDPR", "HIPAA", "PCI-DSS"],
+      "audits": ["annual", "quarterly", "continuous"],
+      "reporting": ["automated", "real-time", "compliance"],
+      "certifications": ["ISO27001", "SOC2", "GDPR", "HIPAA", "PCI-DSS"]
+    },
+    "sla": {
+      "uptime": "99.99%",
+      "response_time": "100ms",
+      "recovery_time": "30min",
+      "support": "24/7",
+      "escalation": "30min"
+    },
+    "disaster_recovery": {
+      "rto": "4hours",
+      "rpo": "1hour",
+      "backup_frequency": "hourly",
+      "recovery_procedures": "documented",
+      "test_frequency": "quarterly"
+    },
+    "monitoring": {
+      "business_metrics": true,
+      "compliance_metrics": true,
+      "security_metrics": true,
+      "performance_metrics": true,
+      "availability_metrics": true
+    }
+  }
+}

@@ -1,0 +1,79 @@
+﻿[2026-02-18 20:14:21] [INFO] Orbit CLI iniciado
+[2026-02-18 20:14:21] [INFO] Executando comando: deploy
+[2026-02-18 20:14:22] [ERROR] Erro no comando deploy : O termo 'C:\runner-ecosystem\runner-orbit-cli\runner-system\deploy\commands\deploy.ps1' não é reconhecido como nome de cmdlet, função, arquivo de script ou programa operável. Verifique a grafia do nome ou, se um caminho tiver sido incluído, veja se o caminho está correto e tente novamente.
+[2026-02-18 20:14:54] [INFO] Orbit CLI iniciado
+[2026-02-18 20:14:54] [INFO] Executando comando: deploy
+[2026-02-18 20:15:01] [INFO] Orbit CLI iniciado
+[2026-02-18 20:15:01] [INFO] Executando comando: deploy
+[2026-02-18 20:15:02] [INFO] Orbit CLI iniciado
+[2026-02-18 20:15:02] [INFO] Executando comando: deploy
+[2026-02-18 20:15:34] [INFO] Orbit CLI iniciado
+[2026-02-18 20:15:35] [INFO] Executando comando: deploy
+[2026-02-18 20:15:42] [INFO] Orbit CLI iniciado
+[2026-02-18 20:15:42] [INFO] Executando comando: deploy
+[2026-02-18 20:16:13] [INFO] Orbit CLI iniciado
+[2026-02-18 20:16:13] [INFO] Executando comando: deploy com argumentos: 
+[2026-02-18 20:16:20] [INFO] Orbit CLI iniciado
+[2026-02-18 20:16:20] [INFO] Executando comando: deploy com argumentos: 
+[2026-02-18 20:17:22] [INFO] Orbit CLI iniciado
+[2026-02-18 20:17:22] [INFO] Executando comando: deploy com argumentos: 
+[2026-02-18 20:17:35] [INFO] Orbit CLI iniciado
+[2026-02-18 20:17:35] [INFO] Executando comando: deploy com argumentos: 
+[2026-02-18 20:17:58] [INFO] Orbit CLI iniciado
+[2026-02-18 20:17:58] [INFO] Executando comando: deploy com argumentos: 
+[2026-02-18 20:18:31] [INFO] Orbit CLI iniciado
+[2026-02-18 20:18:31] [INFO] Executando comando: deploy com argumentos: 
+[2026-02-18 20:18:54] [INFO] Orbit CLI iniciado
+[2026-02-18 20:18:54] [INFO] Executando comando: deploy com argumentos: 
+[2026-02-18 20:19:10] [INFO] Orbit CLI iniciado
+[2026-02-18 20:19:10] [INFO] Executando comando: deploy com argumentos: 
+[2026-02-18 20:19:41] [INFO] Orbit CLI iniciado
+[2026-02-18 20:19:41] [INFO] Executando comando: deploy com argumentos: staging
+[2026-02-18 20:20:10] [INFO] Orbit CLI iniciado
+[2026-02-18 20:20:10] [INFO] Executando comando: deploy
+[2026-02-18 20:20:22] [INFO] Orbit CLI iniciado
+[2026-02-18 20:20:22] [INFO] Executando comando: deploy
+[2026-02-18 20:20:23] [INFO] Orbit CLI iniciado
+[2026-02-18 20:20:23] [INFO] Executando comando: deploy
+[2026-02-18 20:20:23] [INFO] Orbit CLI iniciado
+[2026-02-18 20:20:23] [INFO] Executando comando: deploy
+[2026-02-18 22:33:41] [INFO] Orbit CLI iniciado
+[2026-02-18 22:33:41] [INFO] Executando comando: build
+[2026-02-18 22:33:53] [INFO] Orbit CLI iniciado
+[2026-02-18 22:33:53] [INFO] Executando comando: kernel
+[2026-02-18 22:33:54] [ERROR] Erro no comando kernel : No linha:1 caractere:115
++ ... rnel.ps1" execute --module example_module --input {"action":"status"}
++                                                                ~~~~~~~~~
+Token ':"status"' inesperado na expressão ou instrução.
+[2026-02-18 22:34:00] [INFO] Orbit CLI iniciado
+[2026-02-18 22:34:00] [INFO] Executando comando: kernel
+[2026-02-18 22:34:00] [ERROR] Erro no comando kernel : No linha:1 caractere:115
++ ... rnel.ps1" execute --module example_module --input {"action":"status"}
++                                                                ~~~~~~~~~
+Token ':"status"' inesperado na expressão ou instrução.
+[2026-02-18 22:34:12] [INFO] Orbit CLI iniciado
+[2026-02-18 22:34:12] [INFO] Executando comando: modules
+[2026-02-18 22:34:24] [INFO] Orbit CLI iniciado
+[2026-02-18 22:34:24] [INFO] Executando comando: modules
+[2026-02-18 22:34:31] [INFO] Orbit CLI iniciado
+[2026-02-18 22:34:31] [INFO] Executando comando: observability
+[2026-02-18 22:35:00] [INFO] Orbit CLI iniciado
+[2026-02-18 22:35:00] [INFO] Executando comando: governance
+[2026-02-18 22:35:07] [INFO] Orbit CLI iniciado
+[2026-02-18 22:35:07] [INFO] Executando comando: build
+[2026-02-18 22:35:08] [ERROR] Erro no comando build : C:\runner-ecosystem\agent-observability\cli.py:52: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+[2026-02-18 22:35:30] [INFO] Orbit CLI iniciado
+[2026-02-18 22:35:30] [INFO] Executando comando: build
+[2026-02-18 22:35:31] [ERROR] Erro no comando build : C:\runner-ecosystem\agent-observability\cli.py:52: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+[2026-02-18 22:36:05] [INFO] Orbit CLI iniciado
+[2026-02-18 22:36:05] [INFO] Executando comando: build
+[2026-02-18 22:36:06] [ERROR] Erro no comando build : usage: cli.py [-h] {log,history,env} ...
+[2026-02-18 22:36:31] [INFO] Orbit CLI iniciado
+[2026-02-18 22:36:31] [INFO] Executando comando: build
+[2026-02-18 22:36:32] [ERROR] Erro no comando build : C:\runner-ecosystem\agent-observability\cli.py:52: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+[2026-02-18 22:36:49] [INFO] Orbit CLI iniciado
+[2026-02-18 22:36:49] [INFO] Executando comando: build
+[2026-02-18 22:37:02] [INFO] Orbit CLI iniciado
+[2026-02-18 22:37:02] [INFO] Executando comando: build
+[2026-02-18 22:37:11] [INFO] Orbit CLI iniciado
+[2026-02-18 22:37:11] [INFO] Executando comando: modules

@@ -1,0 +1,20 @@
+{
+  "name": "agent-governance",
+  "version": "1.0.0",
+  "description": "Governance Agent - Registry and version control",
+  "author": "Runner Ecosystem",
+  "responsibilities": [
+    "Maintain official module registry",
+    "Control module status",
+    "Manage version control",
+    "Permission and whitelist/blacklist control"
+  ],
+  "dependencies": [],
+  "entry_point": "src/registry.py",
+  "interfaces": {
+    "registry": "registry.py",
+    "status": "status_manager.py",
+    "version": "version_control.py",
+    "permissions": "permissions.py"
+  }
+}

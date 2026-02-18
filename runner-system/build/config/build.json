@@ -1,0 +1,33 @@
+{
+  "projects": {
+    "meu-projeto": {
+      "path": "../../meu-projeto",
+      "dependencies": [],
+      "pre_build": ["scripts/prebuild.ps1"],
+      "post_build": ["scripts/postbuild.ps1"],
+      "test_command": "",
+      "doc_command": ""
+    }
+  },
+  "cache_dir": "cache",
+  "build": {
+    "version": "1.1.0",
+    "output_dir": "artifacts",
+    "default_target": "release",
+    "targets": ["debug", "release"]
+  },
+  "agents": {
+    "kernel": "agent-kernel/cli.py",
+    "modules": "agent-modules/cli.py",
+    "observability": "agent-observability/cli.py",
+    "governance": "agent-governance/cli.py"
+  },
+  "last_build": {
+    "timestamp": "",
+    "status": "",
+    "target": "",
+    "duration_ms": 0,
+    "project": ""
+  },
+  "build_history": []
+}

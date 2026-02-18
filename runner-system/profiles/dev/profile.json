@@ -1,0 +1,122 @@
+{
+  "profile": "development",
+  "description": "Development environment profile",
+  "version": "1.0.0",
+  "created_at": "2026-02-10",
+  "author": "Runner Team",
+  "settings": {
+    "logging": {
+      "level": "DEBUG",
+      "file": "development.log",
+      "max_size": "10MB",
+      "retention_days": 7,
+      "console_output": true,
+      "structured_logging": true
+    },
+    "health_check": {
+      "interval": 10,
+      "timeout": 5,
+      "max_retries": 3,
+      "enabled": true,
+      "auto_recover": true
+    },
+    "metrics": {
+      "enabled": true,
+      "interval": 30,
+      "retention_days": 14,
+      "console_output": true,
+      "file_output": true,
+      "custom_metrics": ["cpu", "memory", "disk", "network"]
+    },
+    "build": {
+      "mode": "development",
+      "optimization": "none",
+      "source_maps": true,
+      "watch_mode": true,
+      "incremental_build": true
+    },
+    "deploy": {
+      "environment": "test",
+      "auto_deploy": false,
+      "rollback_enabled": true,
+      "health_check_before_deploy": true,
+      "backup_before_deploy": true
+    },
+    "security": {
+      "audit_enabled": true,
+      "password_policy": {
+        "minimum_length": 8,
+        "require_uppercase": false,
+        "require_lowercase": false,
+        "require_numbers": false,
+        "require_special_characters": false,
+        "password_expiration_days": 0
+      },
+      "mfa_required": false,
+      "encryption_at_rest": false,
+      "encryption_in_transit": false
+    },
+    "observability": {
+      "tracing_enabled": true,
+      "sampling_rate": 100,
+      "span_export": "console",
+      "metrics_export": "console",
+      "logs_export": "console"
+    },
+    "cluster": {
+      "node_count": 1,
+      "node_type": "single",
+      "replication_factor": 1,
+      "quorum_size": 1,
+      "heartbeat_interval": 30
+    },
+    "sdk": {
+      "template": "basic-service",
+      "examples": ["hello-world", "api-service", "worker-service"],
+      "verbose_output": true,
+      "auto_format": true
+    },
+    "profiles": {
+      "active_profile": "development",
+      "profile_switch_timeout": 5,
+      "profile_validation": true,
+      "profile_backup": true
+    }
+  },
+  "dependencies": {
+    "required": ["supervisor", "build", "observability"],
+    "optional": ["security", "cluster", "sdk"],
+    "version_constraints": {
+      "supervisor": "~1.0.0",
+      "build": "~1.0.0",
+      "observability": "~1.0.0"
+    }
+  },
+  "environment_variables": {
+    "NODE_ENV": "development",
+    "LOG_LEVEL": "DEBUG",
+    "DEBUG": "*",
+    "CI": "false",
+    "DEVELOPMENT": "true"
+  },
+  "paths": {
+    "logs": "./logs",
+    "artifacts": "./artifacts",
+    "config": "./config",
+    "temp": "./temp",
+    "cache": "./cache"
+  },
+  "services": {
+    "enabled": ["supervisor", "build", "observability"],
+    "auto_start": true,
+    "health_check_on_start": true,
+    "graceful_shutdown": true
+  },
+  "features": {
+    "hot_reload": true,
+    "auto_reload": true,
+    "debug_mode": true,
+    "verbose_logging": true,
+    "development_tools": true
+  }
+}

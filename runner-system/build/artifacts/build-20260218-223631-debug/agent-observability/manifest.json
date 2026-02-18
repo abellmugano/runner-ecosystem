@@ -1,0 +1,19 @@
+{
+  "name": "agent-observability",
+  "version": "1.0.0",
+  "description": "Observability Agent - Logging and history system",
+  "author": "Runner Ecosystem",
+  "responsibilities": [
+    "Complete logging system",
+    "Execution history by module",
+    "Consolidate history and failures",
+    "Detect execution environment"
+  ],
+  "dependencies": [],
+  "entry_point": "src/logger.py",
+  "interfaces": {
+    "logger": "logger.py",
+    "history": "history.py",
+    "environment": "environment.py"
+  }
+}

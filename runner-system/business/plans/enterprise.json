@@ -1,0 +1,29 @@
+{
+  "name": "enterprise",
+  "description": "Enterprise edition for large organizations",
+  "features": [
+    "Unlimited projects",
+    "Enterprise CI/CD",
+    "24/7 premium support",
+    "Private modules",
+    "Advanced security",
+    "Full observability",
+    "Team collaboration",
+    "GitHub/GitLab/Bitbucket integration",
+    "Self-hosted options",
+    "Custom SLAs",
+    "Advanced compliance",
+    "Dedicated infrastructure"
+  ],
+  "limits": {
+    "concurrent_builds": "unlimited",
+    "storage": "unlimited",
+    "build_time": "unlimited",
+    "users": "unlimited",
+    "environments": "unlimited"
+  },
+  "price": "Contact sales",
+  "billing_cycle": "Annual",
+  "currency": "USD",
+  "custom_pricing": true
+}

@@ -1,0 +1,24 @@
+{
+  "name": "pro",
+  "description": "Professional edition for teams",
+  "features": [
+    "Unlimited projects",
+    "Advanced CI/CD",
+    "Priority support",
+    "Private modules",
+    "Advanced security",
+    "Enhanced observability",
+    "Team collaboration",
+    "GitHub/GitLab/Bitbucket integration"
+  ],
+  "limits": {
+    "concurrent_builds": 10,
+    "storage": "50GB",
+    "build_time": "unlimited",
+    "users": 10,
+    "environments": 3
+  },
+  "price": "29",
+  "billing_cycle": "Monthly",
+  "currency": "USD"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "community",
+  "description": "Open source community edition",
+  "features": [
+    "Unlimited projects",
+    "Basic CI/CD",
+    "Community support",
+    "Public modules",
+    "Basic security",
+    "Limited observability",
+    "Single user",
+    "GitHub integration"
+  ],
+  "limits": {
+    "concurrent_builds": 2,
+    "storage": "5GB",
+    "build_time": "30 minutes/day",
+    "users": 1,
+    "environments": 1
+  },
+  "price": "Free",
+  "billing_cycle": "Monthly",
+  "currency": "USD"
+}

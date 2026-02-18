@@ -1,0 +1,19 @@
+{
+  "nodes": [],
+  "cluster_name": "Runner Cluster",
+  "cluster_version": "1.0.0",
+  "node_count": 0,
+  "leader": "",
+  "status": "INACTIVE",
+  "health": {
+    "last_check": "",
+    "status": "UNKNOWN",
+    "issues": []
+  },
+  "config": {
+    "heartbeat_interval": 30,
+    "failure_threshold": 3,
+    "replication_factor": 2,
+    "quorum_size": 1
+  }
+}

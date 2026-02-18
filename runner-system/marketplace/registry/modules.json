@@ -1,0 +1,319 @@
+{
+  "registry": "Runner Marketplace",
+  "version": "1.0.0",
+  "last_updated": "2026-02-11",
+  "modules": [
+    {
+      "name": "logging-enhancer",
+      "version": "1.0.0",
+      "description": "Enhanced logging with structured formats and AI-powered analysis",
+      "author": "Runner Team",
+      "category": "observability",
+      "tags": ["logging", "structured", "ai", "analysis"],
+      "dependencies": {
+        "supervisor": "~1.0.0",
+        "observability": "~1.0.0"
+      },
+      "files": ["logging-enhancer.ps1", "config/logging.json"],
+      "size": "2.5MB",
+      "license": "MIT",
+      "rating": 4.8,
+      "downloads": 1250,
+      "last_updated": "2026-02-10",
+      "requires": ["powershell 7.0+", "runner 1.0.0"],
+      "provides": ["structured-logging", "ai-analysis", "log-enrichment"],
+      "documentation": "https://docs.runner.marketplace/logging-enhancer",
+      "source": "https://github.com/runner/marketplace/logging-enhancer"
+    },
+    {
+      "name": "gpu-monitor",
+      "version": "1.1.0",
+      "description": "Comprehensive GPU monitoring and optimization for AI workloads",
+      "author": "Runner AI Team",
+      "category": "ai",
+      "tags": ["gpu", "monitoring", "ai", "optimization"],
+      "dependencies": {
+        "supervisor": "~1.0.0",
+        "observability": "~1.0.0",
+        "ai": "~1.0.0"
+      },
+      "files": ["gpu-monitor.ps1", "config/gpu.json", "scripts/gpu-optimization.ps1"],
+      "size": "3.2MB",
+      "license": "Apache-2.0",
+      "rating": 4.9,
+      "downloads": 875,
+      "last_updated": "2026-02-09",
+      "requires": ["powershell 7.0+", "nvidia-smi", "runner 1.0.0"],
+      "provides": ["gpu-monitoring", "gpu-optimization", "ai-workload-tracking"],
+      "documentation": "https://docs.runner.marketplace/gpu-monitor",
+      "source": "https://github.com/runner/marketplace/gpu-monitor"
+    },
+    {
+      "name": "compliance-checker",
+      "version": "2.0.0",
+      "description": "Enterprise compliance checking and reporting for regulatory standards",
+      "author": "Runner Enterprise Team",
+      "category": "security",
+      "tags": ["compliance", "security", "enterprise", "audit"],
+      "dependencies": {
+        "supervisor": "~1.0.0",
+        "security": "~1.0.0",
+        "observability": "~1.0.0"
+      },
+      "files": ["compliance-checker.ps1", "config/compliance.json", "reports/compliance-report.ps1"],
+      "size": "4.1MB",
+      "license": "Commercial",
+      "rating": 4.7,
+      "downloads": 420,
+      "last_updated": "2026-02-08",
+      "requires": ["powershell 7.0+", "runner 1.0.0", "compliance-framework"],
+      "provides": ["compliance-checking", "audit-reporting", "regulatory-compliance"],
+      "documentation": "https://docs.runner.marketplace/compliance-checker",
+      "source": "https://github.com/runner/marketplace/compliance-checker"
+    },
+    {
+      "name": "distributed-cache",
+      "version": "1.2.0",
+      "description": "Distributed caching system for high-performance applications",
+      "author": "Runner Core Team",
+      "category": "performance",
+      "tags": ["cache", "distributed", "performance", "scalability"],
+      "dependencies": {
+        "supervisor": "~1.0.0",
+        "cluster": "~1.0.0",
+        "observability": "~1.0.0"
+      },
+      "files": ["distributed-cache.ps1", "config/cache.json", "scripts/cache-management.ps1"],
+      "size": "2.8MB",
+      "license": "MIT",
+      "rating": 4.6,
+      "downloads": 1530,
+      "last_updated": "2026-02-07",
+      "requires": ["powershell 7.0+", "runner 1.0.0", "redis"],
+      "provides": ["distributed-caching", "cache-management", "performance-optimization"],
+      "documentation": "https://docs.runner.marketplace/distributed-cache",
+      "source": "https://github.com/runner/marketplace/distributed-cache"
+    },
+    {
+      "name": "api-gateway",
+      "version": "2.1.0",
+      "description": "API gateway with rate limiting, authentication, and routing",
+      "author": "Runner Services Team",
+      "category": "networking",
+      "tags": ["api", "gateway", "networking", "security"],
+      "dependencies": {
+        "supervisor": "~1.0.0",
+        "security": "~1.0.0",
+        "observability": "~1.0.0"
+      },
+      "files": ["api-gateway.ps1", "config/gateway.json", "scripts/route-management.ps1"],
+      "size": "3.5MB",
+      "license": "MIT",
+      "rating": 4.8,
+      "downloads": 980,
+      "last_updated": "2026-02-06",
+      "requires": ["powershell 7.0+", "runner 1.0.0", "http-server"],
+      "provides": ["api-gateway", "rate-limiting", "authentication", "routing"],
+      "documentation": "https://docs.runner.marketplace/api-gateway",
+      "source": "https://github.com/runner/marketplace/api-gateway"
+    },
+    {
+      "name": "event-bus",
+      "version": "1.3.0",
+      "description": "Event-driven architecture with pub/sub messaging",
+      "author": "Runner Architecture Team",
+      "category": "architecture",
+      "tags": ["events", "messaging", "pubsub", "architecture"],
+      "dependencies": {
+        "supervisor": "~1.0.0",
+        "cluster": "~1.0.0",
+        "observability": "~1.0.0"
+      },
+      "files": ["event-bus.ps1", "config/bus.json", "scripts/event-management.ps1"],
+      "size": "2.9MB",
+      "license": "MIT",
+      "rating": 4.5,
+      "downloads": 1120,
+      "last_updated": "2026-02-05",
+      "requires": ["powershell 7.0+", "runner 1.0.0", "message-queue"],
+      "provides": ["event-bus", "pubsub-messaging", "event-driven-architecture"],
+      "documentation": "https://docs.runner.marketplace/event-bus",
+      "source": "https://github.com/runner/marketplace/event-bus"
+    },
+    {
+      "name": "backup-manager",
+      "version": "1.4.0",
+      "description": "Automated backup management with scheduling and retention",
+      "author": "Runner DevOps Team",
+      "category": "devops",
+      "tags": ["backup", "automation", "devops", "recovery"],
+      "dependencies": {
+        "supervisor": "~1.0.0",
+        "deploy": "~1.0.0",
+        "security": "~1.0.0"
+      },
+      "files": ["backup-manager.ps1", "config/backup.json", "scripts/backup-scheduling.ps1"],
+      "size": "3.0MB",
+      "license": "MIT",
+      "rating": 4.6,
+      "downloads": 650,
+      "last_updated": "2026-02-04",
+      "requires": ["powershell 7.0+", "runner 1.0.0", "storage-service"],
+      "provides": ["backup-management", "automated-backups", "disaster-recovery"],
+      "documentation": "https://docs.runner.marketplace/backup-manager",
+      "source": "https://github.com/runner/marketplace/backup-manager"
+    },
+    {
+      "name": "monitoring-dashboard",
+      "version": "1.5.0",
+      "description": "Real-time monitoring dashboard with visualizations",
+      "author": "Runner UI Team",
+      "category": "ui",
+      "tags": ["dashboard", "monitoring", "visualization", "ui"],
+      "dependencies": {
+        "supervisor": "~1.0.0",
+        "observability": "~1.0.0",
+        "security": "~1.0.0"
+      },
+      "files": ["monitoring-dashboard.ps1", "config/dashboard.json", "web/dashboard.html", "scripts/dashboard-api.ps1"],
+      "size": "4.5MB",
+      "license": "MIT",
+      "rating": 4.9,
+      "downloads": 720,
+      "last_updated": "2026-02-03",
+      "requires": ["powershell 7.0+", "runner 1.0.0", "web-server"],
+      "provides": ["monitoring-dashboard", "real-time-visualization", "system-metrics"],
+      "documentation": "https://docs.runner.marketplace/monitoring-dashboard",
+      "source": "https://github.com/runner/marketplace/monitoring-dashboard"
+    },
+    {
+      "name": "secrets-manager",
+      "version": "2.0.1",
+      "description": "Secure secrets management with encryption and access control",
+      "author": "Runner Security Team",
+      "category": "security",
+      "tags": ["secrets", "encryption", "security", "access-control"],
+      "dependencies": {
+        "supervisor": "~1.0.0",
+        "security": "~1.0.0",
+        "observability": "~1.0.0"
+      },
+      "files": ["secrets-manager.ps1", "config/secrets.json", "scripts/secrets-management.ps1"],
+      "size": "3.8MB",
+      "license": "Commercial",
+      "rating": 4.8,
+      "downloads": 540,
+      "last_updated": "2026-02-02",
+      "requires": ["powershell 7.0+", "runner 1.0.0", "encryption-service"],
+      "provides": ["secrets-management", "secure-storage", "access-control"],
+      "documentation": "https://docs.runner.marketplace/secrets-manager",
+      "source": "https://github.com/runner/marketplace/secrets-manager"
+    },
+    {
+      "name": "auto-scaling",
+      "version": "1.6.0",
+      "description": "Automatic scaling based on metrics and load patterns",
+      "author": "Runner Performance Team",
+      "category": "performance",
+      "tags": ["scaling", "performance", "automation", "load"],
+      "dependencies": {
+        "supervisor": "~1.0.0",
+        "cluster": "~1.0.0",
+        "observability": "~1.0.0"
+      },
+      "files": ["auto-scaling.ps1", "config/scaling.json", "scripts/autoscaling-rules.ps1"],
+      "size": "3.3MB",
+      "license": "MIT",
+      "rating": 4.7,
+      "downloads": 890,
+      "last_updated": "2026-02-01",
+      "requires": ["powershell 7.0+", "runner 1.0.0", "monitoring-service"],
+      "provides": ["auto-scaling", "performance-optimization", "load-balancing"],
+      "documentation": "https://docs.runner.marketplace/auto-scaling",
+      "source": "https://github.com/runner/marketplace/auto-scaling"
+    }
+  ],
+  "categories": {
+    "observability": {
+      "count": 3,
+      "modules": ["logging-enhancer", "gpu-monitor", "monitoring-dashboard"],
+      "description": "Monitoring, logging, and system visibility modules"
+    },
+    "security": {
+      "count": 3,
+      "modules": ["compliance-checker", "secrets-manager", "api-gateway"],
+      "description": "Security, compliance, and access control modules"
+    },
+    "performance": {
+      "count": 3,
+      "modules": ["distributed-cache", "auto-scaling", "gpu-monitor"],
+      "description": "Performance optimization and scaling modules"
+    },
+    "ai": {
+      "count": 1,
+      "modules": ["gpu-monitor"],
+      "description": "AI and machine learning modules"
+    },
+    "networking": {
+      "count": 1,
+      "modules": ["api-gateway"],
+      "description": "Networking and communication modules"
+    },
+    "architecture": {
+      "count": 1,
+      "modules": ["event-bus"],
+      "description": "Architecture and design pattern modules"
+    },
+    "devops": {
+      "count": 1,
+      "modules": ["backup-manager"],
+      "description": "DevOps and infrastructure modules"
+    },
+    "ui": {
+      "count": 1,
+      "modules": ["monitoring-dashboard"],
+      "description": "User interface and visualization modules"
+    }
+  },
+  "latest_updates": [
+    {
+      "module": "logging-enhancer",
+      "version": "1.0.1",
+      "changes": "Fixed memory leak in log rotation, improved AI analysis accuracy",
+      "date": "2026-02-10"
+    },
+    {
+      "module": "gpu-monitor",
+      "version": "1.1.0",
+      "changes": "Added support for AMD GPUs, improved performance metrics",
+      "date": "2026-02-09"
+    },
+    {
+      "module": "compliance-checker",
+      "version": "2.0.0",
+      "changes": "Major update with new compliance standards and automated reporting",
+      "date": "2026-02-08"
+    }
+  ],
+  "featured_modules": ["logging-enhancer", "gpu-monitor", "compliance-checker", "distributed-cache", "api-gateway"],
+  "new_modules": ["auto-scaling", "secrets-manager"],
+  "top_rated_modules": ["gpu-monitor", "monitoring-dashboard", "logging-enhancer"],
+  "most_downloaded_modules": ["distributed-cache", "logging-enhancer", "api-gateway"],
+  "search": {
+    "enabled": true,
+    "indexed_fields": ["name", "description", "tags", "category", "author"],
+    "last_indexed": "2026-02-11"
+  },
+  "installation": {
+    "default_path": "./modules",
+    "backup_before_install": true,
+    "auto_dependencies": true,
+    "version_check": true
+  },
+  "updates": {
+    "auto_check": true,
+    "check_interval": 86400,
+    "notify_updates": true,
+    "auto_update": false
+  }
+}
