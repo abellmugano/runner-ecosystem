@@ -1,5 +1,0 @@
-{
-  "dashboard": {"output_dir": "reports", "template": "default.html"},
-  "alerts": {"consecutive_failures": 3},
-  "metrics": {"collect_build_time": true}
-}
