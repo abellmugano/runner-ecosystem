@@ -1,0 +1,5 @@
+[
+  {"name": "test", "url": "https://example.test", "auth": {}},
+  {"name": "staging", "url": "https://staging.example", "auth": {}},
+  {"name": "production", "url": "https://prod.example", "auth": {}}
+]
